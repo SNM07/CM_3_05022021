@@ -1,15 +1,13 @@
-@import url (https://fonts.googleapis.com/css2?family=Shrikhand|Roboto)
+@import "./Utils/variables";
+@import "./Utils/functions";
+@import "./Utils/mixins";
 
-* {
-  font-display: swap;
-  font-family: Roboto;
-}
+@import "./Base/fondations";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Shrikhand;
-}
+@import "./Components/components";
+
+@import "./Layouts/header";
+@import "./Layouts/menus";
+@import "./Layouts/footer";
+
+@import "./Pages/accueil";

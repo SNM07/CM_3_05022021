@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
 * {
   font-family: "Roboto", serif;
+
+  @include HnFontFam("Shrikhand");
+
   box-sizing: border-box;
-}
-* h1,
-* h2,
-* h3,
-* h4,
-* h5,
-* h6 {
-  font-family: "Shrikhand", serif;
 }
 
 a:visited {
@@ -21,14 +17,3 @@ a {
   text-decoration: none;
   color: black;
 }
-
-#accueil h1,
-#accueil h2,
-#accueil h3,
-#accueil h4,
-#accueil h5,
-#accueil h6 {
-  font-family: "Roboto", serif;
-}
-
-/*# sourceMappingURL=style.css.map */

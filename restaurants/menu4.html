@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../html/header.html");
+        $("#footer").load("../html/footer.html");
+      });
+    </script>
+    <title>Menu - Le délice des sens</title>
+    <link rel="icon" type="image/png" href="..\images\logo\ohmyfood@2x.svg" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8c176d9289.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <main id="carteMenu">
+      <section class="illustration">
+        <img
+          src="../images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+          alt="Le délice des sens"
+        />
+        <div class="restname">
+          <h1>Le délice des sens</h1>
+          <i class="far fa-heart"></i>
+        </div>
+      </section>
+      <section class="menu">
+        <div class="menuPart entrees">
+          <span class="menuTitles">ENTRÉES</span>
+          <div class="menuItems">
+            <span class="titleItems">Tartare de thon</span>
+            <span class="descItems">Assaisonné au yuzu</span>
+            <span class="priceItems">25€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="menuItems">
+            <span class="titleItems">Bouchée de homard croustillant</span>
+            <span class="descItems">Et sa farandole de petits légumes</span>
+            <span class="priceItems">35€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="menuItems">
+            <span class="titleItems">Velouté de cèpes</span>
+            <span class="descItems">Aux truffes</span>
+            <span class="priceItems">20€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+        <div class="menuPart plats"></div>
+        <span class="menuTitles">PLATS</span>
+        <div class="menuItems">
+          <span class="titleItems">Poulet rôti aux herbes de provence</span>
+          <span class="descItems">Et sa crème de truffe</span>
+          <span class="priceItems">40€</span>
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="menuItems">
+          <span class="titleItems">Langouste rôtie</span>
+          <span class="descItems">Et ses légumes de saison</span>
+          <span class="priceItems">35€</span>
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="menuItems">
+          <span class="titleItems">Côte de boeuf Angus</span>
+          <span class="descItems">Et sa purée de panais</span>
+          <span class="priceItems">44€</span>
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="menuPart desserts">
+          <span class="menuTitles">DESSERTS</span>
+          <div class="menuItems">
+            <span class="titleItems">Farandole de desserts</span>
+            <span class="descItems">Du chef</span>
+            <span class="priceItems">18€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="menuItems">
+            <span class="titleItems">Crème brulée</span>
+            <span class="descItems">Revisitée</span>
+            <span class="priceItems">22€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="menuItems">
+            <span class="titleItems">Tiramisu</span>
+            <span class="descItems">À la noisette</span>
+            <span class="priceItems">23€</span>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </section>
+      <div class="commander">
+        <button type="button">Commander</button>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>
