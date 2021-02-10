@@ -1,0 +1,66 @@
+@mixin boutonRose {
+  background: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  border-radius: 60px;
+  height: 60px;
+  width: 240px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+}
+
+@mixin boutonFonc {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+  align-items: center;
+  & input {
+    list-style: none;
+    visibility: hidden;
+  }
+  & h3 {
+    position: absolute;
+    left: -12px;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: $color-primary;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+  & i {
+    left: 30px;
+    font-size: 1.2rem;
+    position: absolute;
+    color: #8f8f8f;
+  }
+  & p {
+    padding-left: 60px;
+    font-weight: bold;
+  }
+  & input:checked + li::before {
+    background-color: rgba($color-secondary, 0.2);
+  }
+}
+
+@mixin menuItemsBtn {
+  background-color: white;
+  box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+  border-radius: 20px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  & .titleItems {
+    font-weight: bold;
+  }
+}

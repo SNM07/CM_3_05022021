@@ -1,3 +1,125 @@
+#header-accueil .fas {
+  @include arrowDisplay(transparent);
+}
+
 #accueil {
-  @include HnFontFam("Roboto");
+  @include HnFontFam($font-text);
+  & > #loc {
+    width: 100%;
+    & input {
+      position: relative;
+      width: 100%;
+      border: none;
+      text-align: center;
+      height: 50px;
+      background: linear-gradient(to bottom, darken(#e8e8e8, 10%), #e8e8e8 8px);
+      &::placeholder {
+        font-family: "FontAwesome", sans-serif;
+        font-weight: bold;
+        color: #262626;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    & i {
+      position: absolute;
+      align-self: center;
+    }
+  }
+  & > #resa {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: $color-bg-grey1;
+    width: 100%;
+    & h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+    & p {
+      padding-bottom: 30px;
+    }
+    & #button-explorer {
+      & button {
+        @include boutonRose;
+      }
+    }
+  }
+  & > #fonc {
+    margin: 20px 20px 20px 20px;
+    & h2 {
+      margin-bottom: 40px;
+    }
+    & ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0 10px 0 10px;
+      & li {
+        @include boutonFonc;
+        list-style: none;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  & #rest {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+    background-color: $color-bg-grey1;
+    & h2 {
+      padding: 60px 0 20px 0;
+    }
+
+    & .menuAccueil {
+      width: 100%;
+      position: relative;
+      border-radius: 20px;
+      background-color: white;
+      margin-bottom: 20px;
+      box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+
+      & a img {
+        object-fit: cover;
+        object-position: center 60%;
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+      }
+      & a .Nouveau {
+        background-color: $color-tertiary;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border-radius: 5px;
+        height: 35px;
+        width: 100px;
+        text-align: center;
+        line-height: 35px;
+        font-weight: bold;
+        color: darken($color-tertiary, 40%);
+        box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+      }
+      & a .cardMenuBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px 20px 20px;
+        & i {
+          font-size: 2rem;
+          align-self: center;
+        }
+        & h4 {
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+  }
 }

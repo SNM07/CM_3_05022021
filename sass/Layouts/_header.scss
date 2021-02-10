@@ -1,0 +1,17 @@
+#head {
+  display: flex;
+  flex-direction: row;
+  margin: 14px;
+  & > .headerItems {
+    flex-basis: 100%;
+    align-self: center;
+
+    & > img {
+      width: 10rem;
+    }
+
+    & > a i {
+      font-size: 1.2rem;
+    }
+  }
+}

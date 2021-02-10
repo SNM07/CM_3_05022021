@@ -8,3 +8,8 @@
     font-family: $fontfam, serif;
   }
 }
+
+@mixin arrowDisplay($arrowColor: black) {
+  color: $arrowColor;
+}
+
