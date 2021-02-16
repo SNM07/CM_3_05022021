@@ -871,20 +871,39 @@ footer li i {
 #accueil > #fonc h2 {
   margin-bottom: 40px;
 }
-#accueil > #fonc ul {
+#accueil > #fonc #foncRest {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0 10px 0 10px;
 }
 @media screen and (min-width: 800px) {
-  #accueil > #fonc ul {
+  #accueil > #fonc #foncRest {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 20px;
   }
 }
-#accueil > #fonc ul li {
+#accueil > #fonc #foncRest .fonc {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 20px;
+}
+#accueil > #fonc #foncRest .fonc input[type=radio] {
+  list-style: none;
+  visibility: hidden;
+}
+#accueil > #fonc #foncRest .fonc input[type=radio]:hover + label {
+  content: "";
+  background-color: rgba(255, 121, 218, 0.2);
+  color: #9356dc;
+}
+#accueil > #fonc #foncRest .fonc input[type=radio]:checked + label {
+  content: "";
+  background-color: rgba(255, 121, 218, 0.2);
+  color: #9356dc;
+}
+#accueil > #fonc #foncRest .fonc input[type=radio] + label {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -895,17 +914,11 @@ footer li i {
   cursor: pointer;
   align-items: center;
   transition: all 0.3s ease;
-  list-style: none;
-  margin-bottom: 20px;
 }
-#accueil > #fonc ul li:hover {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label:hover {
   box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
 }
-#accueil > #fonc ul li input {
-  list-style: none;
-  visibility: hidden;
-}
-#accueil > #fonc ul li h3 {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label h3 {
   position: absolute;
   left: -12px;
   border-radius: 25px;
@@ -917,24 +930,22 @@ footer li i {
   font-size: 0.8rem;
   line-height: 25px;
 }
-#accueil > #fonc ul li i {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label i {
   left: 30px;
   font-size: 1.2rem;
   position: absolute;
   color: #8f8f8f;
 }
-#accueil > #fonc ul li p {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label p {
   padding-left: 60px;
+  padding-right: 10px;
   font-weight: bold;
 }
-#accueil > #fonc ul li p:hover {
-  opacity: 0.6;
-}
-#accueil > #fonc ul li input:checked + li::before {
-  background-color: rgba(255, 121, 218, 0.2);
+#accueil > #fonc #foncRest .fonc input[type=radio] + label p:hover {
+  color: #9356dc;
 }
 @media screen and (min-width: 800px) {
-  #accueil > #fonc ul li {
+  #accueil > #fonc #foncRest .fonc {
     margin: 0 20px 0 20px;
   }
 }

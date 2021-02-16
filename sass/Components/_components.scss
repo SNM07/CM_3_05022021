@@ -22,50 +22,62 @@
 }
 
 @mixin boutonFonc {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
   width: 100%;
-  height: 80px;
-  border-radius: 20px;
-  cursor: pointer;
-  align-items: center;
-  transition: all 0.3s ease;
-  &:hover {
-    box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
-  }
-  & input {
+  & input[type="radio"] {
     list-style: none;
     visibility: hidden;
-  }
-  & h3 {
-    position: absolute;
-    left: -12px;
-    border-radius: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: $color-primary;
-    color: white;
-    text-align: center;
-    font-size: 0.8rem;
-    line-height: 25px;
-  }
-  & i {
-    left: 30px;
-    font-size: 1.2rem;
-    position: absolute;
-    color: #8f8f8f;
-  }
-  & p {
-    padding-left: 60px;
-    font-weight: bold;
-    &:hover {
-      opacity: 0.6;
+    &:hover + label {
+      content: "";
+      background-color: rgba($color-secondary, 0.2);
+      color: $color-primary;
     }
-  }
-  & input:checked + li::before {
-    background-color: rgba($color-secondary, 0.2);
+    &:checked + label {
+      content: "";
+      background-color: rgba($color-secondary, 0.2);
+      color: $color-primary;
+    }
+
+    + label {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+      width: 100%;
+      height: 80px;
+      border-radius: 20px;
+      cursor: pointer;
+      align-items: center;
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
+      }
+      & h3 {
+        position: absolute;
+        left: -12px;
+        border-radius: 25px;
+        width: 25px;
+        height: 25px;
+        background-color: $color-primary;
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 25px;
+      }
+      & i {
+        left: 30px;
+        font-size: 1.2rem;
+        position: absolute;
+        color: #8f8f8f;
+      }
+      & p {
+        padding-left: 60px;
+        padding-right: 10px;
+        font-weight: bold;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
   }
 }
 

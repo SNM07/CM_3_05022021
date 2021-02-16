@@ -86,26 +86,32 @@
       </section>
       <section id="fonc">
         <h2>Fonctionnement</h2>
-        <ul id="foncRest">
-          <li id="choose">
-            <input type="radio" name="fonct" value="choose" />
-            <h3>1</h3>
-            <i class="fas fa-mobile-alt"></i>
-            <p>Choisissez un restaurant</p>
-          </li>
-          <li id="comp">
-            <input type="radio" name="fonct" value="comp" />
-            <h3>2</h3>
-            <i class="fas fa-list-ul"></i>
-            <p>Composez votre menu</p>
-          </li>
-          <li id="deg">
-            <input type="radio" name="fonct" value="deg" />
-            <h3>3</h3>
-            <i class="fas fa-store"></i>
-            <p>Dégustez au restaurant</p>
-          </li>
-        </ul>
+        <div id="foncRest">
+          <div class="fonc">
+            <input type="radio" name="fonct" value="choose" id="chooseInput" />
+            <label for="chooseInput" id="choose">
+              <h3>1</h3>
+              <i class="fas fa-mobile-alt"></i>
+              <p>Choisissez un restaurant</p>
+            </label>
+          </div>
+          <div class="fonc">
+            <input type="radio" name="fonct" value="comp" id="compInput" />
+            <label for="compInput" id="comp">
+              <h3>2</h3>
+              <i class="fas fa-list-ul"></i>
+              <p>Composez votre menu</p>
+            </label>
+          </div>
+          <div class="fonc">
+            <input type="radio" name="fonct" value="deg" id="degInput" />
+            <label for="degInput" id="deg">
+              <h3>3</h3>
+              <i class="fas fa-store"></i>
+              <p>Dégustez au restaurant</p>
+            </label>
+          </div>
+        </div>
       </section>
       <section id="rest">
         <h2>Restaurants</h2>
