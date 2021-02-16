@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #f5f5f5;
+  background: rgba(245, 245, 245, 0.8);
   width: 100%;
   height: 100%;
   animation: 3s ease-out both preloader;
@@ -11,16 +11,373 @@
 
 @keyframes preloader {
   0% {
-    opacity: 0.8;
+    background: rgba(245, 245, 245, 0.8);
     z-index: 500;
   }
   80% {
-    opacity: 0.8;
+    background: rgba(245, 245, 245, 0.8);
     z-index: 500;
+  }
+  100% {
+    background: rgba(245, 245, 245, 0);
+    z-index: -500;
+  }
+}
+/* PRELOADER CSS IMAGE : */
+@keyframes preloaderImage {
+  0% {
+    opacity: 1;
+    z-index: 502;
+  }
+  70% {
+    opacity: 1;
+    z-index: 502;
   }
   100% {
     opacity: 0;
     z-index: -500;
+  }
+}
+.baseBox {
+  margin-top: 50%;
+}
+@media screen and (min-width: 800px) {
+  .baseBox {
+    margin-top: 20%;
+  }
+}
+
+.box {
+  float: left;
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  background-color: transparent;
+}
+
+.base {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.bg {
+  background: rgba(0, 0, 0, 0.6);
+  height: 70vw;
+  width: 70vw;
+  z-index: -2;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  animation: 3s ease-out both preloaderImage;
+}
+@media screen and (min-width: 800px) {
+  .bg {
+    height: 50vw;
+    width: 50vw;
+  }
+}
+
+#box1 {
+  position: relative;
+}
+
+.fork {
+  position: absolute;
+  right: 0;
+  width: 14%;
+  height: 100%;
+  margin-right: 10px;
+  margin-left: 10px;
+  filter: drop-shadow(2px 2px 0 grey) drop-shadow(2px 2px 4px #3b3b3b);
+}
+
+.forkHead {
+  position: absolute;
+  background: #e4ecf2;
+  width: 100%;
+  height: 14%;
+  top: 22%;
+  border-radius: 0 0 40% 40%;
+}
+
+#f1 {
+  position: inherit;
+  background: #e4ecf2;
+  width: 20%;
+  height: 156%;
+  bottom: 100%;
+  border-radius: 40% 40% 0 0;
+}
+
+#f2 {
+  position: inherit;
+  background: #e4ecf2;
+  width: 20%;
+  height: 156%;
+  bottom: 100%;
+  left: 40%;
+  border-radius: 40% 40% 0 0;
+}
+
+#f3 {
+  position: inherit;
+  background: #e4ecf2;
+  width: 20%;
+  height: 156%;
+  bottom: 100%;
+  right: 0;
+  border-radius: 40% 40% 0 0;
+}
+
+.forkHandle {
+  position: absolute;
+  background: #e4ecf2;
+  height: 70%;
+  width: 100%;
+  right: 0%;
+  bottom: 0%;
+  clip-path: polygon(30% 0%, 70% 0%, 90% 100%, 10% 100%);
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+
+#box3 {
+  position: relative;
+}
+
+.knife {
+  position: absolute;
+  left: 0;
+  width: 14%;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: drop-shadow(2px 2px 0 grey) drop-shadow(2px 2px 4px #3b3b3b);
+}
+
+.knifeHead {
+  position: absolute;
+  background: #e4ecf2;
+  height: 50%;
+  width: 100%;
+  left: 0%;
+  top: 0;
+  border-radius: 80% 4px 10px 10px;
+}
+
+.knifeHandle {
+  position: absolute;
+  background: #e4ecf2;
+  height: 70%;
+  width: 100%;
+  left: 10%;
+  bottom: 0%;
+  clip-path: polygon(30% 0%, 70% 0%, 90% 100%, 10% 100%);
+  border-radius: 0 0 50% 50%;
+}
+
+#box2 {
+  position: relative;
+}
+
+.plate {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #e4ecf2;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.6vw grey inset;
+  filter: drop-shadow(4px 4px 12px #3b3b3b);
+}
+
+.borderPlate {
+  position: absolute;
+  top: 0;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.6vw grey inset;
+  z-index: 2;
+}
+
+.centerPlate {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.4vw grey inset;
+  z-index: 6;
+}
+
+.lds-dual-ring {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+.lds-dual-ring:after {
+  content: " ";
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 68%;
+  height: 68%;
+  display: block;
+  z-index: 1;
+  top: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: 2.4vw solid #bfcfdb;
+  border-color: #bfcfdb transparent #bfcfdb transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  font-size: 10rem;
+  margin: auto;
+  z-index: 3;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  right: 15%;
+}
+
+.gloader {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: base 3s steps(1) 0s infinite;
+}
+
+.gloader > * {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 1;
+  border-radius: 0em 0.5em 0.5em 0em;
+  transform-origin: 0px 50%;
+}
+
+.gloader > *:first-child {
+  z-index: 2;
+  transform-style: preserve-3d;
+  animation: flip 3s linear 0s infinite;
+}
+
+.gloader > *:last-child {
+  -webkit-animation: reveal 3s steps(1) 0s infinite;
+  animation: reveal 3s steps(1) 0s infinite;
+}
+
+/* Standard Animations */
+@keyframes base {
+  0% {
+    transform: rotate(0deg);
+    background-color: #9356dc;
+  }
+  25% {
+    transform: rotate(90deg);
+    background-color: #99e2d0;
+  }
+  50% {
+    transform: rotate(180deg);
+    background-color: #ff79da;
+  }
+  75% {
+    transform: rotate(270deg);
+    background-color: #bfcfdb;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: #99e2d0;
+  }
+}
+@keyframes reveal {
+  0% {
+    background-color: #99e2d0;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: #ff79da;
+    transform: rotate(180deg);
+  }
+  50% {
+    background-color: #bfcfdb;
+    transform: rotate(0deg);
+  }
+  75% {
+    background-color: #9356dc;
+    transform: rotate(180deg);
+  }
+  100% {
+    background-color: #99e2d0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes flip {
+  0% {
+    background-color: #9356dc;
+    transform: rotateY(0deg);
+  }
+  12.5%, 87.56% {
+    background-color: #9eb7c9;
+  }
+  12.51%, 37.5% {
+    background-color: #71d7be;
+  }
+  25% {
+    background-color: #99e2d0;
+  }
+  37.51%, 62.5% {
+    background-color: #ff46cc;
+  }
+  50% {
+    background-color: #ff79da;
+  }
+  62.51%, 87.5% {
+    background-color: #9eb7c9;
+  }
+  75%, 78% {
+    background-color: #bfcfdb;
+  }
+  100% {
+    background-color: #9356dc;
+    transform: rotateY(-720deg);
   }
 }
 * {
