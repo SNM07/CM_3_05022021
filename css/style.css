@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  animation: 3s ease-out both preloader;
+}
+
+@keyframes preloader {
+  0% {
+    opacity: 0.8;
+    z-index: 500;
+  }
+  80% {
+    opacity: 0.8;
+    z-index: 500;
+  }
+  100% {
+    opacity: 0;
+    z-index: -500;
+  }
+}
 * {
   font-family: "Roboto", serif;
   box-sizing: border-box;
@@ -23,6 +47,13 @@ a {
   color: black;
 }
 
+.filled-in {
+  font-weight: 900 !important;
+  opacity: 1;
+  transition: all 2s ease;
+  color: #9356dc;
+}
+
 #head {
   display: flex;
   flex-direction: row;
@@ -31,9 +62,11 @@ a {
 #head > .headerItems {
   flex-basis: 100%;
   align-self: center;
+  display: flex;
 }
 #head > .headerItems > img {
   width: 10rem;
+  margin: auto;
 }
 #head > .headerItems > a i {
   font-size: 1.2rem;
@@ -65,10 +98,16 @@ a {
   line-height: 80px;
   padding: 10px 0 0 20px;
 }
+@media screen and (min-width: 800px) {
+  #carteMenu .illustration .restname h1 {
+    font-size: 1.8rem;
+  }
+}
 #carteMenu .illustration .restname i {
   padding: 10px 30px 0 0;
   font-size: 1.6rem;
   align-self: center;
+  cursor: pointer;
 }
 #carteMenu .menu {
   margin-top: 60px;
@@ -77,6 +116,7 @@ a {
   margin-bottom: 40px;
 }
 #carteMenu .menu .menuPart .menuTitles {
+  animation: menuDisplay 0.7s;
   padding: 20px 20px 10px 20px;
   display: inline-block;
   position: relative;
@@ -94,6 +134,7 @@ a {
 
 .menuItemsButtons {
   margin: 20px;
+  animation: menuItemsDisplay 0.4s ease-out;
 }
 .menuItemsButtons .menuItems {
   background-color: white;
@@ -161,6 +202,7 @@ a {
   transition: all 0.3s;
   background-color: #99e2d0;
   color: white;
+  cursor: pointer;
 }
 .menuItemsButtons .menuItems .menuItemsTD {
   display: flex;
@@ -173,9 +215,19 @@ a {
   width: 100%;
   min-width: 0;
 }
+@media screen and (min-width: 800px) {
+  .menuItemsButtons .menuItems .menuItemsTD {
+    padding-left: 40px;
+  }
+}
 .menuItemsButtons .menuItems .menuItemsTD .titleItems {
   font-weight: bold;
   padding-bottom: 10px;
+}
+@media screen and (min-width: 800px) {
+  .menuItemsButtons .menuItems .menuItemsTD .titleItems {
+    font-size: 1.1rem;
+  }
 }
 .menuItemsButtons .menuItems::before {
   font-weight: 900;
@@ -229,10 +281,6 @@ a {
 .menuItemsButtons input:checked + .menuItems i {
   transform: rotate(360deg);
 }
-.menuItemsButtons input:checked + .menuItems .check {
-  /* right: -100%;
-  width: 100%; */
-}
 .menuItemsButtons input:checked + .menuItems .priceItems {
   width: 100%;
   right: 0;
@@ -261,11 +309,89 @@ a {
   border-radius: 60px;
   height: 60px;
   width: 240px;
+  cursor: pointer;
+  outline: none;
   border: none;
   color: white;
   font-size: 1rem;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
   margin: 20px 80px 100px 80px;
+}
+.commander button:hover {
+  opacity: 0.8;
+  box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
+}
+
+/*@keyframes menuDisplay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}*/
+@keyframes menuItemsDisplay {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+    backface-visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+}
+.menuItemsButtons:nth-child(1) {
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(2) {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(3) {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(4) {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(5) {
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(6) {
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(7) {
+  animation-delay: 0.7s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(8) {
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(9) {
+  animation-delay: 0.9s;
+  animation-fill-mode: both;
+}
+
+.menuItemsButtons:nth-child(10) {
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 footer {
@@ -302,6 +428,9 @@ footer li i {
   color: transparent;
 }
 
+#accueil {
+  background-color: #f5f5f5;
+}
 #accueil h1,
 #accueil h2,
 #accueil h3,
@@ -309,6 +438,11 @@ footer li i {
 #accueil h5,
 #accueil h6 {
   font-family: "Roboto", serif;
+}
+@media screen and (min-width: 800px) {
+  #accueil {
+    padding-bottom: 40px;
+  }
 }
 #accueil > #loc {
   width: 100%;
@@ -360,13 +494,22 @@ footer li i {
   border-radius: 60px;
   height: 60px;
   width: 240px;
+  cursor: pointer;
+  outline: none;
   border: none;
   color: white;
   font-size: 1rem;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+#accueil > #resa #button-explorer button:hover {
+  opacity: 0.8;
+  box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
 }
 #accueil > #fonc {
-  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  background-color: white;
 }
 #accueil > #fonc h2 {
   margin-bottom: 40px;
@@ -377,6 +520,13 @@ footer li i {
   list-style: none;
   padding: 0 10px 0 10px;
 }
+@media screen and (min-width: 800px) {
+  #accueil > #fonc ul {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
 #accueil > #fonc ul li {
   display: flex;
   flex-direction: row;
@@ -385,9 +535,14 @@ footer li i {
   width: 100%;
   height: 80px;
   border-radius: 20px;
+  cursor: pointer;
   align-items: center;
+  transition: all 0.3s ease;
   list-style: none;
   margin-bottom: 20px;
+}
+#accueil > #fonc ul li:hover {
+  box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
 }
 #accueil > #fonc ul li input {
   list-style: none;
@@ -415,8 +570,16 @@ footer li i {
   padding-left: 60px;
   font-weight: bold;
 }
+#accueil > #fonc ul li p:hover {
+  opacity: 0.6;
+}
 #accueil > #fonc ul li input:checked + li::before {
   background-color: rgba(255, 121, 218, 0.2);
+}
+@media screen and (min-width: 800px) {
+  #accueil > #fonc ul li {
+    margin: 0 20px 0 20px;
+  }
 }
 #accueil #rest {
   display: flex;
@@ -424,8 +587,24 @@ footer li i {
   padding: 0 20px 40px 20px;
   background-color: #f5f5f5;
 }
+@media screen and (min-width: 800px) {
+  #accueil #rest {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 45% 45%;
+    grid-gap: 20px;
+  }
+}
 #accueil #rest h2 {
   padding: 60px 0 20px 0;
+}
+#accueil #rest #emptyH2 {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  #accueil #rest #emptyH2 {
+    display: block;
+  }
 }
 #accueil #rest .menuAccueil {
   width: 100%;
@@ -435,12 +614,23 @@ footer li i {
   margin-bottom: 20px;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
 }
+@media screen and (min-width: 800px) {
+  #accueil #rest .menuAccueil {
+    margin-bottom: 0;
+    align-self: center;
+  }
+}
 #accueil #rest .menuAccueil a img {
   object-fit: cover;
   object-position: center 60%;
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0 0;
+}
+@media screen and (min-width: 800px) {
+  #accueil #rest .menuAccueil a img {
+    height: 300px;
+  }
 }
 #accueil #rest .menuAccueil a .Nouveau {
   background-color: #99e2d0;
@@ -468,6 +658,11 @@ footer li i {
 }
 #accueil #rest .menuAccueil a .cardMenuBottom h4 {
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 800px) {
+  #accueil #rest .menuAccueil a .cardMenuBottom h4 {
+    padding-bottom: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

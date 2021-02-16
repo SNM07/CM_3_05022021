@@ -7,8 +7,6 @@
     <title>Ohmyfood!</title>
     <link rel="icon" type="image/png" href="..\images\logo\ohmyfood@2x.svg" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
@@ -21,15 +19,20 @@
       src="https://kit.fontawesome.com/8c176d9289.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).on("click", ".fa-heart", function () {
+        $(this).toggleClass("filled-in");
+      });
+    </script>
   </head>
   <body>
     <div id="header-accueil">
       <header id="header"></header>
     </div>
+    <div class="preloader"></div>
     <main id="accueil">
       <div id="loc">
         <input type="search" placeholder="&#xf3c5;     Paris, Belleville" />
-        <!-- <i class="fas fa-map-marker-alt"></i> -->
       </div>
       <section id="resa">
         <h1>
@@ -71,6 +74,7 @@
       </section>
       <section id="rest">
         <h2>Restaurants</h2>
+        <h2 id="emptyH2"></h2>
         <div id="menu1" class="menuAccueil">
           <a href="restaurants/menu1.html">
             <div class="Nouveau"><span>Nouveau</span></div>
@@ -135,6 +139,7 @@
         </div>
       </section>
     </main>
+
     <footer id="footer"></footer>
   </body>
 </html>

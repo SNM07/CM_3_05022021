@@ -7,10 +7,18 @@
   border-radius: 60px;
   height: 60px;
   width: 240px;
+  cursor: pointer;
+  outline: none;
   border: none;
   color: white;
   font-size: 1rem;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
+  }
 }
 
 @mixin boutonFonc {
@@ -21,7 +29,12 @@
   width: 100%;
   height: 80px;
   border-radius: 20px;
+  cursor: pointer;
   align-items: center;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
+  }
   & input {
     list-style: none;
     visibility: hidden;
@@ -47,6 +60,9 @@
   & p {
     padding-left: 60px;
     font-weight: bold;
+    &:hover {
+      opacity: 0.6;
+    }
   }
   & input:checked + li::before {
     background-color: rgba($color-secondary, 0.2);
@@ -120,6 +136,7 @@
           transition: all 0.3s;
           background-color: $color-tertiary;
           color: white;
+          cursor: pointer;
         }
       }
     }
@@ -133,12 +150,16 @@
       white-space: nowrap;
       width: 100%;
       min-width: 0;
+      @include large-only {
+        padding-left: 40px;
+      }
 
       & .titleItems {
         font-weight: bold;
         padding-bottom: 10px;
-      }
-      & .descItems {
+        @include large-only {
+          font-size: 1.1rem;
+        }
       }
     }
     &::before {
@@ -191,10 +212,7 @@
       i {
         transform: rotate(360deg);
       }
-      .check {
-        /* right: -100%;
-        width: 100%; */
-      }
+
       .priceItems {
         width: 100%;
         right: 0;

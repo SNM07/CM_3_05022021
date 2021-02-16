@@ -5,9 +5,11 @@
   & > .headerItems {
     flex-basis: 100%;
     align-self: center;
+    display: flex;
 
     & > img {
       width: 10rem;
+      margin: auto;
     }
 
     & > a i {
