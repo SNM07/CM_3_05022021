@@ -60,7 +60,7 @@
   }
   & > #fonc {
     padding: 20px 20px 40px 20px;
-    background-color: white;
+    background-color: $color-light;
     & h2 {
       padding: 40px 0 30px 0;
     }
@@ -109,7 +109,7 @@
       width: 100%;
       position: relative;
       border-radius: 20px;
-      background-color: white;
+      background-color: $color-light;
       margin-bottom: 20px;
       @include box-shadow-base;
       @include large-only {

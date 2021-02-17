@@ -9,7 +9,7 @@
   }
 }
 
-@mixin arrowDisplay($arrowColor: black) {
+@mixin arrowDisplay($arrowColor: $color-dark) {
   color: $arrowColor;
 }
 
