@@ -98,8 +98,6 @@
     cursor: pointer;
     user-select: none;
     background-size: 200% 200%;
-    // transition: background-position ease-in-out 0.3s;
-    // background-image: linear-gradient(to right, #deebff 50%, white 0);
     background-position: right;
 
     & .menuItemsPI {
@@ -146,9 +144,6 @@
           justify-content: center;
           align-items: center;
           font-size: 1.8rem;
-          /* right: -80px;
-        height: 100%;
-        width: 80px; */
           transition: all 0.3s;
           background-color: $color-tertiary;
           color: white;
@@ -183,21 +178,6 @@
         text-overflow: ellipsis;
       }
     }
-    /* &::before {
-      font-weight: 900;
-      color: #0065fc;
-      display: block;
-      position: absolute;
-      top: 0px;
-      bottom: 10px;
-      left: 0px;
-      width: 52px;
-      height: 52px;
-      text-align: center;
-      line-height: 52px;
-      background-color: #deebff;
-      border-radius: 100px;
-    } */
 
     @include large-only {
       &:hover .check i {
@@ -221,14 +201,6 @@
   & input {
     position: absolute;
     left: -9999px;
-    /* &:checked + .menuItems {
-      background-color: #0065fc;
-      background-position: left;
-      background-image: linear-gradient(to right, #0065fc 50%, white 0);
-      color: white;
-      border-color: #deebff;
-    } */
-
     &:checked + .menuItems {
       i {
         transform: rotate(360deg);
@@ -249,12 +221,6 @@
         }
       }
     }
-
-    /* &:checked + .menuItems::before {
-      background-color: #0065fc;
-      color: white;
-      border-color: #deebff;
-    } */
   }
 }
 
