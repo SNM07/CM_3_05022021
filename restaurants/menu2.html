@@ -18,11 +18,6 @@
       src="https://kit.fontawesome.com/8c176d9289.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).on("click", ".far", function () {
-        $(this).toggleClass("filled-in");
-      });
-    </script>
   </head>
   <body>
     <header id="header"></header>
@@ -34,7 +29,10 @@
         />
         <div class="restname">
           <h1>La note enchantée</h1>
-          <i class="far fa-heart"></i>
+          <div class="like">
+            <input type="checkbox" id="heart" />
+            <label for="heart" class="far fa-heart"></label>
+          </div>
         </div>
       </section>
       <section class="menu">

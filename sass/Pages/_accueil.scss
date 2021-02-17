@@ -148,9 +148,10 @@
         padding: 10px 20px 20px 20px;
         @include large-only {
         }
-        & i {
+        & .like {
           font-size: 2rem;
           align-self: center;
+          @include likeButton;
         }
         & h4 {
           padding-bottom: 0.2rem;
