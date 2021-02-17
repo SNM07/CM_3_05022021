@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   margin: 14px;
+  @include large-only {
+    margin: 26px;
+  }
   & > .headerItems {
     flex-basis: 100%;
     align-self: center;
@@ -10,7 +13,7 @@
     & > img {
       width: 10rem;
       margin: auto;
-      @include large-only{
+      @include large-only {
         width: 16rem;
       }
     }

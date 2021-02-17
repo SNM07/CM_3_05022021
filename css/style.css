@@ -428,6 +428,11 @@ a {
   flex-direction: row;
   margin: 14px;
 }
+@media screen and (min-width: 800px) {
+  #head {
+    margin: 26px;
+  }
+}
 #head > .headerItems {
   flex-basis: 100%;
   align-self: center;
