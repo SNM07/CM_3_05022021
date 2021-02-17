@@ -10,6 +10,9 @@
     & > img {
       width: 10rem;
       margin: auto;
+      @include large-only{
+        width: 16rem;
+      }
     }
 
     & > a i {

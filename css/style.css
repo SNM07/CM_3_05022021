@@ -437,6 +437,11 @@ a {
   width: 10rem;
   margin: auto;
 }
+@media screen and (min-width: 800px) {
+  #head > .headerItems > img {
+    width: 16rem;
+  }
+}
 #head > .headerItems > a i {
   font-size: 1.2rem;
 }
