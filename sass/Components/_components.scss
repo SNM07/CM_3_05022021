@@ -26,6 +26,7 @@
   & input[type="radio"] {
     list-style: none;
     visibility: hidden;
+    display: none;
     &:hover + label {
       content: "";
       background-color: rgba($color-secondary, 0.2);
@@ -70,7 +71,7 @@
         color: #8f8f8f;
       }
       & p {
-        padding-left: 60px;
+        padding-left: 70px;
         padding-right: 10px;
         font-weight: bold;
         &:hover {
@@ -172,6 +173,11 @@
         @include large-only {
           font-size: 1.1rem;
         }
+      }
+      & .descItems {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
     &::before {

@@ -39,12 +39,18 @@
   }
 }
 .baseBox {
-  margin-top: 50%;
-}
-@media screen and (min-width: 800px) {
-  .baseBox {
-    margin-top: 20%;
-  }
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
@@ -73,8 +79,8 @@
 }
 @media screen and (min-width: 800px) {
   .bg {
-    height: 50vw;
-    width: 50vw;
+    height: 40vw;
+    width: 40vw;
   }
 }
 
@@ -247,9 +253,17 @@
   top: 0;
   margin: auto;
   border-radius: 50%;
-  border: 2.4vw solid #bfcfdb;
+  border: 3.2vw solid #bfcfdb;
   border-color: #bfcfdb transparent #bfcfdb transparent;
   animation: lds-dual-ring 1.2s linear infinite;
+}
+@media screen and (min-width: 800px) {
+  .lds-dual-ring:after {
+    width: 60%;
+    height: 60%;
+    border: 2.4vw solid #bfcfdb;
+    border-color: #bfcfdb transparent #bfcfdb transparent;
+  }
 }
 
 @keyframes lds-dual-ring {
@@ -586,6 +600,11 @@ a {
     font-size: 1.1rem;
   }
 }
+.menuItemsButtons .menuItems .menuItemsTD .descItems {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .menuItemsButtons .menuItems::before {
   font-weight: 900;
   color: #0065fc;
@@ -865,11 +884,11 @@ footer li i {
   box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
 }
 #accueil > #fonc {
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 40px 20px;
   background-color: white;
 }
 #accueil > #fonc h2 {
-  margin-bottom: 40px;
+  padding: 40px 0 30px 0;
 }
 #accueil > #fonc #foncRest {
   display: flex;
@@ -892,6 +911,7 @@ footer li i {
 #accueil > #fonc #foncRest .fonc input[type=radio] {
   list-style: none;
   visibility: hidden;
+  display: none;
 }
 #accueil > #fonc #foncRest .fonc input[type=radio]:hover + label {
   content: "";
@@ -937,7 +957,7 @@ footer li i {
   color: #8f8f8f;
 }
 #accueil > #fonc #foncRest .fonc input[type=radio] + label p {
-  padding-left: 60px;
+  padding-left: 70px;
   padding-right: 10px;
   font-weight: bold;
 }
@@ -952,7 +972,7 @@ footer li i {
 #accueil #rest {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 40px 20px;
+  padding: 20px 20px 40px 20px;
   background-color: #f5f5f5;
 }
 @media screen and (min-width: 800px) {
@@ -964,7 +984,7 @@ footer li i {
   }
 }
 #accueil #rest h2 {
-  padding: 60px 0 20px 0;
+  padding: 40px 0 30px 0;
 }
 #accueil #rest #emptyH2 {
   display: none;
