@@ -111,7 +111,7 @@
       border-radius: 20px;
       background-color: white;
       margin-bottom: 20px;
-      box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+      @include box-shadow-base;
       @include large-only {
         margin-bottom: 0;
         align-self: center;
@@ -139,7 +139,7 @@
         line-height: 35px;
         font-weight: bold;
         color: darken($color-tertiary, 40%);
-        box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
+        @include box-shadow-base;
       }
       & a .cardMenuBottom {
         display: flex;
