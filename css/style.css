@@ -1033,6 +1033,7 @@ footer li i {
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 20px;
+  cursor: pointer;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
 }
 @media screen and (min-width: 800px) {
@@ -1041,7 +1042,7 @@ footer li i {
     align-self: center;
   }
 }
-#accueil #rest .menuAccueil a img {
+#accueil #rest .menuAccueil img {
   object-fit: cover;
   object-position: center 60%;
   width: 100%;
@@ -1049,11 +1050,11 @@ footer li i {
   border-radius: 20px 20px 0 0;
 }
 @media screen and (min-width: 800px) {
-  #accueil #rest .menuAccueil a img {
+  #accueil #rest .menuAccueil img {
     height: 300px;
   }
 }
-#accueil #rest .menuAccueil a .Nouveau {
+#accueil #rest .menuAccueil .Nouveau {
   background-color: #99e2d0;
   position: absolute;
   right: 20px;
@@ -1067,35 +1068,35 @@ footer li i {
   color: #278870;
   box-shadow: 4px 4px 12px rgba(38, 38, 38, 0.3);
 }
-#accueil #rest .menuAccueil a .cardMenuBottom {
+#accueil #rest .menuAccueil .cardMenuBottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 20px 20px 20px;
 }
-#accueil #rest .menuAccueil a .cardMenuBottom .like {
+#accueil #rest .menuAccueil .cardMenuBottom .like {
   font-size: 2rem;
   align-self: center;
 }
-#accueil #rest .menuAccueil a .cardMenuBottom .like input {
+#accueil #rest .menuAccueil .cardMenuBottom .like input {
   display: none;
   cursor: pointer;
 }
-#accueil #rest .menuAccueil a .cardMenuBottom .like input .fa-heart {
+#accueil #rest .menuAccueil .cardMenuBottom .like input .fa-heart {
   transition: all ease-in-out;
   color: #000;
   font-weight: 400;
   opacity: 1;
   cursor: pointer;
 }
-#accueil #rest .menuAccueil a .cardMenuBottom .like input:checked + .fa-heart {
+#accueil #rest .menuAccueil .cardMenuBottom .like input:checked + .fa-heart {
   font-weight: 900 !important;
   color: #9356dc;
   animation: coeur 0.8s ease;
   opacity: 1;
 }
 @media screen and (min-width: 800px) {
-  #accueil #rest .menuAccueil a .cardMenuBottom .like .fa-heart:hover {
+  #accueil #rest .menuAccueil .cardMenuBottom .like .fa-heart:hover {
     font-weight: 900 !important;
     color: #ff79da;
     animation: coeurHover 0.6s ease;
@@ -1137,11 +1138,11 @@ footer li i {
     font-weight: 900;
   }
 }
-#accueil #rest .menuAccueil a .cardMenuBottom h4 {
+#accueil #rest .menuAccueil .cardMenuBottom h4 {
   padding-bottom: 0.2rem;
 }
 @media screen and (min-width: 800px) {
-  #accueil #rest .menuAccueil a .cardMenuBottom h4 {
+  #accueil #rest .menuAccueil .cardMenuBottom h4 {
     padding-bottom: 0.8rem;
   }
 }

@@ -111,13 +111,14 @@
       border-radius: 20px;
       background-color: $color-light;
       margin-bottom: 20px;
+      cursor: pointer;
       @include box-shadow-base;
       @include large-only {
         margin-bottom: 0;
         align-self: center;
       }
 
-      & a img {
+      &  img {
         object-fit: cover;
         object-position: center 60%;
         width: 100%;
@@ -127,7 +128,7 @@
           height: 300px;
         }
       }
-      & a .Nouveau {
+      &  .Nouveau {
         background-color: $color-tertiary;
         position: absolute;
         right: 20px;
@@ -141,7 +142,7 @@
         color: darken($color-tertiary, 40%);
         @include box-shadow-base;
       }
-      & a .cardMenuBottom {
+      &  .cardMenuBottom {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
