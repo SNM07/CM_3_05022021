@@ -971,7 +971,7 @@ footer li i {
 #accueil > #fonc #foncRest .fonc input[type=radio] + label:hover {
   box-shadow: 4px 4px 22px rgba(38, 38, 38, 0.4);
 }
-#accueil > #fonc #foncRest .fonc input[type=radio] + label h3 {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label .num {
   position: absolute;
   left: -12px;
   border-radius: 25px;
@@ -983,18 +983,18 @@ footer li i {
   font-size: 0.8rem;
   line-height: 25px;
 }
-#accueil > #fonc #foncRest .fonc input[type=radio] + label i {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label .fas {
   left: 30px;
   font-size: 1.2rem;
   position: absolute;
   color: #8f8f8f;
 }
-#accueil > #fonc #foncRest .fonc input[type=radio] + label p {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label .foncName {
   padding-left: 70px;
   padding-right: 10px;
   font-weight: bold;
 }
-#accueil > #fonc #foncRest .fonc input[type=radio] + label p:hover {
+#accueil > #fonc #foncRest .fonc input[type=radio] + label .foncName:hover {
   color: #9356dc;
 }
 @media screen and (min-width: 800px) {
