@@ -97,8 +97,7 @@
     overflow: hidden;
     cursor: pointer;
     user-select: none;
-    background-size: 200% 200%;
-    background-position: right;
+    
 
     & .menuItemsPI {
       height: 100%;
@@ -120,6 +119,9 @@
         right: 0;
         font-weight: bold;
         background-color: $color-light;
+        /*transform: translateZ(0);
+        backface-visibility: hidden;
+        filter: blur(0);*/
         @include large-only {
           width: 80%;
         }
@@ -155,10 +157,10 @@
       display: flex;
       flex-direction: column;
       padding-left: 10px;
-      text-overflow: ellipsis;
-      overflow: hidden;
+      padding-right: 4vw;
+      transition: all 0.3s;
       flex: 1;
-      $color-light-space: nowrap;
+      border-right: 0;
       width: 100%;
       min-width: 0;
       @include large-only {
@@ -168,14 +170,18 @@
       & .titleItems {
         font-weight: bold;
         padding-bottom: 10px;
+        white-space: pre;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @include large-only {
           font-size: 1.1rem;
         }
       }
       & .descItems {
         overflow: hidden;
-        $color-light-space: nowrap;
+        white-space: pre;
         text-overflow: ellipsis;
+
       }
     }
 
@@ -220,6 +226,14 @@
           transform: translateX(-100px);
         }
       }
+      .menuItemsTD{
+        border-right: $color-light solid 80px;
+        @include large-only{
+          border-right: $color-light solid 0;
+        }
+      }
+      
+
     }
   }
 }

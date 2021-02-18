@@ -588,8 +588,6 @@ a {
   overflow: hidden;
   cursor: pointer;
   user-select: none;
-  background-size: 200% 200%;
-  background-position: right;
 }
 .menuItemsButtons .menuItems .menuItemsPI {
   height: 100%;
@@ -612,6 +610,9 @@ a {
   right: 0;
   font-weight: bold;
   background-color: #fff;
+  /*transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: blur(0);*/
 }
 @media screen and (min-width: 800px) {
   .menuItemsButtons .menuItems .menuItemsPI .priceItems {
@@ -649,9 +650,10 @@ a {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  padding-right: 4vw;
+  transition: all 0.3s;
   flex: 1;
+  border-right: 0;
   width: 100%;
   min-width: 0;
 }
@@ -663,6 +665,9 @@ a {
 .menuItemsButtons .menuItems .menuItemsTD .titleItems {
   font-weight: bold;
   padding-bottom: 10px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 800px) {
   .menuItemsButtons .menuItems .menuItemsTD .titleItems {
@@ -671,6 +676,7 @@ a {
 }
 .menuItemsButtons .menuItems .menuItemsTD .descItems {
   overflow: hidden;
+  white-space: pre;
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 800px) {
@@ -714,6 +720,14 @@ a {
 @media screen and (min-width: 800px) {
   .menuItemsButtons input:checked + .menuItems .menuItemsPI {
     transform: translateX(-100px);
+  }
+}
+.menuItemsButtons input:checked + .menuItems .menuItemsTD {
+  border-right: #fff solid 80px;
+}
+@media screen and (min-width: 800px) {
+  .menuItemsButtons input:checked + .menuItems .menuItemsTD {
+    border-right: #fff solid 0;
   }
 }
 
