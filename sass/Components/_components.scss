@@ -214,8 +214,8 @@
 
       .priceItems {
         width: 100%;
-        right: 0;
-        padding: 80px 40px 80px 40px;
+        /*right: 0;
+        padding: 80px 40px 80px 40px;*/
         @include large-only {
           width: 50%;
         }
