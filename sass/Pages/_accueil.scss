@@ -84,25 +84,21 @@
       }
     }
   }
-  & #rest {
-    display: flex;
-    flex-direction: column;
+  & #rest{
     padding: 20px 20px 40px 20px;
     background-color: $color-bg-grey1;
-    @include large-only {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 10% 45% 45%;
-      grid-gap: 20px;
-    }
     & h2 {
       padding: 40px 0 30px 0;
     }
-    & #emptyH2 {
-      display: none;
-      @include large-only {
-        display: block;
-      }
+
+    & .restContainer {
+    display: flex;
+    flex-direction: column;
+    @include large-only {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50% 50%;
+      grid-gap: 20px;
     }
 
     & .menuAccueil {
@@ -163,4 +159,5 @@
       }
     }
   }
+}
 }

@@ -119,9 +119,6 @@
         right: 0;
         font-weight: bold;
         background-color: $color-light;
-        /*transform: translateZ(0);
-        backface-visibility: hidden;
-        filter: blur(0);*/
         @include large-only {
           width: 80%;
         }
@@ -214,8 +211,6 @@
 
       .priceItems {
         width: 100%;
-        /*right: 0;
-        padding: 80px 40px 80px 40px;*/
         @include large-only {
           width: 50%;
         }
